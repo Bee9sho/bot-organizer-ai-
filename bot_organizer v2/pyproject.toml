@@ -1,0 +1,19 @@
+[project]
+name = "bot-organizer"
+version = "0.2.0"
+description = "File organizer with undo support"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["typer>=0.12", "pyyaml>=6.0"]
+
+[project.scripts]
+bot-organizer = "bot_organizer.cli:app"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bot_organizer*"]
